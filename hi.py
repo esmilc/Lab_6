@@ -26,6 +26,32 @@ def decode(user_input):
     new_pass = "".join(new_pass_list)
     return new_pass
 
+def menu():
+    print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n')
+
+cont = True
+while cont:
+    menu()
+
+    menu_option = input('Please enter an option: ')
+
+    if menu_option == '1':
+        user_input = input('Please enter your password to encode: ')
+        global encoded_pass
+        encoded_pass = encode(user_input)
+        print('Your password has been encoded and stored!\n')
+
+    elif menu_option == '2':
+        decoded_pass = decode(encoded_pass)
+        print(f'The encoded password is {encoded_pass}, and the original password is {decoded_pass}.')
+        print()
+
+    elif menu_option == '3':
+        break
+
+
+
+
 
 
 
