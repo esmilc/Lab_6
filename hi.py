@@ -16,6 +16,21 @@ def encode(user_input):
         num_str += num
     return num_str
 
+def decode(user_input):
+    password = str(user_input)
+    new_pass_list = []
+    for num in password:
+        num = int(num)
+        num -= 3
+        new_pass_list.append(str(num))
+    new_pass = "".join(new_pass_list)
+    return new_pass
+
+
+
+
+
+
 
 
 
